@@ -20,7 +20,21 @@
     <main class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <button class="btn btn-primary">Fruit Snacks cost: <span>1</span></button>
+                <button onclick="app.snackControllers.getCoins()">Get Coins <span id="coins">0</span></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form class="form-group" onsubmit="app.snackControllers.create(event)">
+                  <label for=""></label>
+                  <input type="text" class="form-control" name="snackName" aria-describedby="helpId" placeholder="Enter Snack...">
+                  <button type="submit" class="btn btn-danger btn-block mt-2">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="snackElem">
+
             </div>
         </div>
     </main>
